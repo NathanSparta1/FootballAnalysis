@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FootballAnalysis2.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to your Football Analysis App!" 
+           HorizontalOptions="Center" FontSize="Large" TextColor="Black"
+           />
+        <Label Text="Please select a Menu below" 
+           HorizontalOptions="Center"
+           />
+
+        <Image Source="FootballStatIcon.png" HorizontalOptions="Center" WidthRequest="220" HeightRequest="300"> </Image>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="CenterAndExpand">
+
+            <Button x:Name="TrainingButton" Text="Training" BackgroundColor="#0F1BFF" Clicked="TrainingMenuButton_Clicked"> </Button>
+            <Button x:Name="MatchButton" Text="Match" BackgroundColor="#FF8000" Clicked="MatchMenuButton_Clicked"> </Button>
+        <Button x:Name="MiscButton" Text="Misc" BackgroundColor="Gray" Clicked="MiscMenuButton_Clicked"> </Button>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

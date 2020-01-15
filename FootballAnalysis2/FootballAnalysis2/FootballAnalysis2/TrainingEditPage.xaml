@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FootballAnalysis2.TrainingEditPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Please edit the training session"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="DateEntry" Placeholder="Date"></Entry>
+            <Entry x:Name="RatingEntry" Placeholder="Rating"></Entry>
+            <Entry x:Name="GoalsEntry" Placeholder="Goals"></Entry>
+            <Entry x:Name="AssistsEntry" Placeholder="Assists"></Entry>
+            <Entry x:Name="TacklesEntry" Placeholder="Tackles"></Entry>
+            <Entry x:Name="DribblesEntry" Placeholder="Dribbles"></Entry>
+            <Entry x:Name="KeyPassesEntry" Placeholder="KeyPasses"></Entry>
+            <Entry x:Name="StaminaEntry" Placeholder="Stamina Rating"></Entry>
+
+            <Button x:Name="EditTrainingBTN" Text="Save Changes" WidthRequest="120" HeightRequest="50" HorizontalOptions="Center" 
+                    Clicked="SaveAndEditBTN"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

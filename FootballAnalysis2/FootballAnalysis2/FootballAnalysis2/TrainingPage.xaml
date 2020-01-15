@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FootballAnalysis2.TrainingPage"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to the Traning Menu" TextColor="White" FontSize="Medium"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Add,edit or delete training sessions with the buttons below" TextColor="White"
+                />
+            <StackLayout Orientation="Horizontal">
+
+                <Button x:Name="AddButton" Text="Add" BackgroundColor="Green" BorderColor="Black" WidthRequest="80" HeightRequest="50" HorizontalOptions="Center" 
+                        Clicked="ButtonAdd_Click" ></Button>
+                
+            <Button x:Name="EditButton" Text="Edit" BackgroundColor="Green" BorderColor="Black" WidthRequest="80" HeightRequest="50" HorizontalOptions="Center" 
+                    Clicked="ButtonEdit_Click" IsEnabled="False"></Button>
+                
+                <Button x:Name="DeleteButton" Text="Delete" BackgroundColor="Red" BorderColor="Black" WidthRequest="110" HeightRequest="50" HorizontalOptions="Center"
+                        Clicked="ButtonDelete_Click" IsEnabled="False"></Button>
+            </StackLayout>
+            <Label x:Name="DateTitle" Text="Date" BackgroundColor ="Blue" TextColor="White"></Label>
+            <Label x:Name="DateContent" TextColor="white"></Label>
+
+            <Label x:Name="RatingTitle" Text="Rating (Out of 10)" BackgroundColor ="Blue" TextColor="White"></Label>
+            <Label x:Name="RatingContent"  TextColor="white"></Label>
+
+            <Label x:Name="GoalsTitle" Text="Goals" BackgroundColor ="Blue" TextColor="White"></Label>
+            <Label x:Name="GoalsContent"  TextColor="white"></Label>
+
+            <Label x:Name="AssistsTitle" Text="Assists" BackgroundColor ="Blue" TextColor="White"></Label>
+            <Label x:Name="AssistsContent"  TextColor="white"></Label>
+
+            <Label x:Name="TacklesTitle" Text="Tackles" BackgroundColor ="Blue" TextColor="White"></Label>
+            <Label x:Name="TacklesContent"  TextColor="white"></Label>
+
+            <Label x:Name="DribblesTitle" Text="Dribbles" BackgroundColor ="Blue" TextColor="White"></Label>
+            <Label x:Name="DribblesContent" TextColor="white"></Label>
+
+            <Label x:Name="KeyPassesTitle" Text="Key Passes" BackgroundColor ="Blue" TextColor="White"></Label>
+            <Label x:Name="KeyPassesContent"  TextColor="white"></Label>
+
+            <Label x:Name="StaminaTitle" Text="Stamina Rating (Out of 10)" BackgroundColor ="Blue" TextColor="White"></Label>
+            <Label x:Name="StaminaContent" TextColor="white"></Label>
+
+            <Label x:Name="CurrentSessions" Text="Current Sessions" BackgroundColor ="Navy" TextColor="White" FontSize="Medium"></Label>
+            <ListView x:Name="TrainingViews" ItemTapped="ListViewSelection" BackgroundColor="#080E80">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Date}"                             
+                                  Detail= "{Binding Rating}"
+                                  TextColor="White"
+                                  DetailColor="Black"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                </ListView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FootballAnalysis2.MatchPage"
+             BackgroundColor="Black">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to the Match Menu" TextColor="White" FontSize="Medium"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Add,edit or delete matches with the buttons below" TextColor="White"
+                />
+            <StackLayout Orientation="Horizontal">
+
+                <Button x:Name="AddButton" Text="Add" BackgroundColor="Green" BorderColor="Black" WidthRequest="80" HeightRequest="50" HorizontalOptions="Center" 
+                        Clicked="ButtonAdd_ClickM" ></Button>
+
+                <Button x:Name="EditButton" Text="Edit" BackgroundColor="Green" BorderColor="Black" WidthRequest="80" HeightRequest="50" HorizontalOptions="Center" 
+                    Clicked="ButtonEdit_ClickM" IsEnabled="False"></Button>
+
+                <Button x:Name="DeleteButton" Text="Delete" BackgroundColor="Red" BorderColor="Black" WidthRequest="110" HeightRequest="50" HorizontalOptions="Center"
+                        Clicked="ButtonDelete_ClickM" IsEnabled="False"></Button>
+            </StackLayout>
+            <Label x:Name="DateTitle" Text="Date" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="DateContent" TextColor="white"></Label>
+
+            <Label x:Name="OpponentTitle" Text="Opponent Name" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="OpponentContent" TextColor="white"></Label>
+
+
+            <Label x:Name="RatingTitle" Text="Rating (Out of 10)" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="RatingContent"  TextColor="white"></Label>
+
+            <Label x:Name="MatchTypeTitle" Text="Type of Match" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="MatchTypeContent" TextColor="white"></Label>
+
+            <Label x:Name="StatisticsTitle" Text="In Game Statistics" BackgroundColor ="#CC6600" TextColor="White" FontSize="Medium"></Label>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="MinutesTitle" Text="Minutes Played" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="MinutesContent" TextColor="white"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="GoalsTitle" Text="Goals" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="GoalsContent"  TextColor="white"></Label>
+
+            <Label x:Name="AssistsTitle" Text="Assists" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="AssistsContent"  TextColor="white"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+            <Label x:Name="TacklesTitle" Text="Tackles" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="TacklesContent"  TextColor="white"></Label>
+            
+                <Label x:Name="DribblesTitle" Text="Dribbles" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="DribblesContent" TextColor="white"></Label>
+
+            <Label x:Name="KeyPassesTitle" Text="Key Passes" BackgroundColor ="#FF8000" TextColor="White"></Label>
+            <Label x:Name="KeyPassesContent"  TextColor="white"></Label>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+            <Label x:Name="StaminaTitle" Text="Stamina Rating (Out of 10)" BackgroundColor ="#FF8000" TextColor="White"></Label>
+           
+            <Label x:Name="StaminaContent" TextColor="white"></Label>
+            </StackLayout>
+            <Label x:Name="Spacing" TextColor="Black"></Label>
+                
+           
+            <Label x:Name="CurrentSessions" Text="Current Matches" BackgroundColor ="#CC6600" TextColor="White" FontSize="Medium"></Label>
+            <ListView x:Name="MatchViews" ItemTapped="ListViewSelection" BackgroundColor="#854300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding OpponentName}"                             
+                                  Detail= "{Binding Date}"
+                                  TextColor="White"
+                                  DetailColor="Black"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
